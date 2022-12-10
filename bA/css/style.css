@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #111122;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #696981;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: #040105;
+    width: 100%;
+    height: 100%;
+    color: #FEFEFE;
+    overflow-x: hidden;
+}
+
+header{
+    height: 7%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px 0px 15px 15px;
+    position: fixed;
+    transition: 0.3s ease-in-out all;
+    z-index: 1;
+    box-shadow: none;
+}
+
+html:not([data-scroll='0']) header{
+    background-color: #111122;
+    box-shadow: 0px 0px 8px rgba(255,255,255,.6);
+}
+
+header img{
+    padding: 5px;
+    float: left;
+    margin-left: 10px;
+}
+
+header nav{
+    float:right;
+    position: relative;
+    left: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: #FEFEFE;
+}
+
+header nav a {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    padding: 5px;
+    font-size: 25px;
+    transition: 0.3s ease-in background-color;
+}
+
+#current-page {
+    background-color: #696981;
+}
+
+#logo {
+    aspect-ratio: 1/1;
+    height: 80%;
+}
+
+header nav a:hover{
+    background-color: #444455;
+}
+
+#title {
+    color: #FEFEFE;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title div *{
+    text-align: center;
+}
+
+#title div h1{
+    font-size: 5rem;
+}
+
+.overflow {
+    height: 3000px;
+    position: absolute;
+    width: 1%;
+}
+
+section{
+    padding: 10px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-10%);
+    transition: 0.3s ease-in all;
+}
+
+.show {
+    filter: blur(0px);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.text-img p{
+    float: left;
+    width: 47%;
+}
+
+.text-img img{
+    float:right;
+    width: 47%;
+    object-fit: cover;
+
+}
+
+section {
+    text-align: justify;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1.65em;
+    text-align: center;
+}
+
+hr {
+    width: 25%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #FEFEFE;
+}
+
+.title-text h1{
+    font-size: 1.75em;
+}
+
+.title-text hr{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.images-3 img {
+    width: 30%;
+}
+
+.right {
+    float:right;
+}
+
+.center {
+    float:center;
+}
+
+.left {
+    float:left;
+}
+
+.img-text .text{
+    float:left;
+    width: 45%;
+    height: calc((75vw*0.45));
+}
+
+.img-text {
+    height: calc((75vw*0.45));
+}
+
+.img-text .text h1 {
+    font-size: 1.75em;
+}
+
+.img-text img {
+    float: right;
+    width: 45%;
+}
+
+.hidden-x{
+    filter: blur(15px);
+    opacity: 0;
+    transition: 0.3s ease-in all;
+}
+
+.hidden-x .text{
+    transform: translateX(-100%);
+    transition: 0.3s ease-in all;
+}
+
+.hidden-x img{
+    display: none;
+    transition: 0.3s ease-in all;
+}
+
+.show-x{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.show-x .text{
+    transform: translateX(0);
+    font-size: 0.9em;
+}
+
+.show-x img{
+    display: block;
+}
+
+.button {
+    padding: 5px;
+    background-color: #FEFEFE;
+    color: #040105;
+    border-radius: 25px;
+    transition: 0.3s ease-in all;
+}
+
+.button:hover{
+    background-color: #040105;
+    color: #fefefe;
+    border: 1px #fefefe solid;
+}
+
+.sources {
+    font-weight: light;
+    font-size: 0.8em;
+}
+
+.sources h6{
+    font-size: 0.9em;
+    text-align: left;
+}
+
+footer {
+    padding: 0 5%;
+    padding-top: 5px;
+    background-color: #111122;
+}
